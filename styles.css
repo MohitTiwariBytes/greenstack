@@ -8,3 +8,158 @@ body {
   height: 100%;
   width: 100%;
 }
+
+@font-face {
+  font-family: "Phantom Sans";
+  src: url("https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff")
+      format("woff"),
+    url("https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff2")
+      format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Phantom Sans";
+  src: url("https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Italic.woff")
+      format("woff"),
+    url("https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Italic.woff2")
+      format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Phantom Sans";
+  src: url("https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff")
+      format("woff"),
+    url("https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff2")
+      format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.main-home-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.home-page {
+  width: 90%;
+  max-width: 2000px;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main__text {
+  font-size: 100px;
+  font-family: "Phantom Sans";
+}
+
+.main__text h1 {
+  overflow: hidden;
+}
+
+.small__text {
+  font-size: 20px;
+  font-family: "Phantom Sans";
+  max-width: 700px;
+  text-align: center;
+}
+
+.small__text p {
+  overflow: hidden;
+}
+
+a {
+  color: black;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+a:focus,
+a:hover {
+  text-decoration-style: wavy;
+  text-decoration-skip-ink: none;
+}
+
+.word21 {
+  border-bottom: 1px solid black;
+  background: linear-gradient(4deg, #09ac37 50%, #c9fe6e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.word21:hover,
+.word21:focus {
+  border-bottom: 1px solid black;
+  border-bottom-style: dashed;
+}
+
+.char {
+  position: relative;
+}
+
+@media (max-width: 1262px) {
+  .main__text {
+    font-size: 7vw;
+  }
+  .small__text {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main__text {
+    font-size: 8.5vw;
+  }
+}
+
+@media (max-width: 744px) {
+  .small__text {
+    font-size: 13px;
+    max-width: 500px;
+  }
+}
+
+#background-flairs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#background-flairs img {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0.8);
+  opacity: 0;
+  user-select: none;
+  transform-origin: center center;
+  will-change: transform, top, left;
+}
