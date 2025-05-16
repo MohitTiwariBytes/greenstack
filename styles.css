@@ -163,3 +163,42 @@ a:hover {
   transform-origin: center center;
   will-change: transform, top, left;
 }
+
+.btns {
+  margin-top: 20px;
+}
+
+.btns button {
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "Phantom Sans";
+  border: 1px solid black;
+  border-radius: 5px;
+  background: linear-gradient(23deg, #09ac37 70%, #c9fe6e);
+  color: rgb(29, 29, 29);
+  cursor: pointer;
+  transition: transform 0.8s cubic-bezier(0.625, 0.05, 0, 1);
+  position: relative;
+}
+
+.btns button:hover {
+  transform: scale(1.02);
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  overflow: hidden;
+}
+
+@media (max-width: 746px) {
+  .btns button {
+    font-size: 13px;
+    padding: 8px 18px;
+  }
+
+  .wrap {
+    height: 13px;
+  }
+}

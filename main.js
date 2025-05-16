@@ -13,6 +13,96 @@ document.addEventListener("DOMContentLoaded", () => {
     wordsClass: "word++",
   });
 
+  let buttonSplit = SplitText.create("#duplicate1, #duplicate2", {
+    type: "chars",
+    wordsClass: "charBtn++",
+  });
+
+  const slideUp = () => {
+    gsap.fromTo(
+      "#duplicate1 div",
+      {
+        y: "0",
+      },
+      {
+        y: "-100%",
+        ease: "smoothEase",
+        stagger: {
+          amount: 0.3,
+          from: "start",
+        },
+        duration: 0.8,
+      }
+    );
+    gsap.fromTo(
+      "#duplicate2 div",
+      {
+        y: "100%",
+      },
+      {
+        y: "-100%",
+        ease: "smoothEase",
+        stagger: {
+          amount: 0.3,
+          from: "start",
+        },
+        duration: 0.8,
+      }
+    );
+  };
+  const slideDown = () => {
+    gsap.fromTo(
+      "#duplicate1 div",
+      {
+        y: "-100%",
+      },
+      {
+        y: "0",
+        ease: "smoothEase",
+        stagger: {
+          amount: 0.3,
+          from: "start",
+        },
+        duration: 0.8,
+      }
+    );
+    gsap.fromTo(
+      "#duplicate2 div",
+      {
+        y: "-100%",
+      },
+      {
+        y: "0",
+        ease: "smoothEase",
+        stagger: {
+          amount: 0.3,
+          from: "start",
+        },
+        duration: 0.8,
+      }
+    );
+  };
+
+  const btn = document.getElementById("rsvpBtn");
+
+  btn.addEventListener("mouseenter", slideUp);
+  btn.addEventListener("mouseleave", slideDown);
+
+  gsap.fromTo(
+    btn,
+    {
+      opacity: 0,
+      top: "25px",
+    },
+    {
+      top: "0px",
+      opacity: 1,
+      duration: 2,
+      ease: "smoothEase",
+      delay: 1,
+    }
+  );
+
   gsap.fromTo(
     ".char",
     {
